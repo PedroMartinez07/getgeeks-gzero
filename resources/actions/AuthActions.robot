@@ -30,3 +30,4 @@ User Should Be Logged In
 
 Should Be Type Email    
     Get Property       ${INPUT_EMAIL}        type       equal        email
+

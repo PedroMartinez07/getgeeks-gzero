@@ -42,3 +42,38 @@ Incorrect Email
     Submit Credentials 
     Should Be Type Email   
 
+Required Email - Desafio 
+   [Tags]        desafio_geeks
+  ${user}        Create Dictionary        email=${EMPTY}       password=pdw123
+    
+    Go To Login Page
+    Fill Credentials                ${user}
+    Submit Credentials
+    Alert Span Should Be            E-mail obrigatório
+
+Required Password - Desafio 
+   [Tags]        desafio_geeks
+  ${user}        Create Dictionary        email=papito@hotmail.com     password=${EMPTY} 
+    
+    Go To Login Page
+    Fill Credentials                ${user}
+    Submit Credentials
+    Alert Span Should Be            Senha obrigatória
+
+Required Email and Password - Desafio 
+   [Tags]        desafio_geeks
+  ${user}        Create Dictionary        email=${EMPTY}       password=${EMPTY}
+    
+    Go To Login Page
+    Fill Credentials                ${user}
+    Submit Credentials
+    Alert Span Should Be            E-mail obrigatório
+    Alert Span Should Be            Senha obrigatória
+
+
+
+
+
+
+
+
